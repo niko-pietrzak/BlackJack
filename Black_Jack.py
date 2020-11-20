@@ -93,7 +93,7 @@ class Player(NPC):
 
 
 check = True
-## kod do właściwej obsługi gry
+
 
 while(check == True):
 
