@@ -198,11 +198,6 @@ while(check == True):
 print("Have a nice day")
 
 
-## UŁATWIENIE - AS ZAWSZE = 11 pkt
-
-
-## NIE SPRAWDZA KONTA ZAWODNIKA
-
 
 
 
