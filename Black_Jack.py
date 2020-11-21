@@ -1,23 +1,19 @@
 import random
 
-class Deck:
+
+# Deck class - stores and actualizes an actual deck, pick random card from the deck
 	def __init__(self, list_of_cards):
 		self.list_of_cards = list_of_cards
 
 	def pick_card(self):
 		random_card = random.choice(self.list_of_cards)
-
-		card_index = self.list_of_cards.index(random_card)
-
-		#w nawiasach musi być indeks XDD
-		#zrobic pętle for dla talii kart która sprawdza kartę z wartością
-		#potem usuwam po indeksie
-		
+		card_index = self.list_of_cards.index(random_card)		
 		self.list_of_cards.pop(card_index)
 		return random_card
 
 
 
+# NPC class - stores, shows and counts a NPC's hand	
 class NPC:
 	def __init__(self, account, card_1, card_2):
 		self.account = account
@@ -65,7 +61,7 @@ class NPC:
 			print("Incorrect symbol!!!")
 
 
-
+# Player class - inherits the functionality from NPC class - stores, shows and counts a player's hand
 class Player(NPC):
 	
 	def __init__(self, account, card_1, card_2):
@@ -80,20 +76,10 @@ class Player(NPC):
 	def show_hand(self):
 		print("Player's hand: " + str(self.hand))
 
-
-	def count_score(self):
-		for card in self.hand:
-			if card == 'A':
-				self.value += 11
-			elif card == 'K' or card == 'Q' or card == 'J':
-				self.value += 10
-			else:
-				self.value += int(card)
-
-
-
+		
+#Below a code to run the game
+		
 check = True
-
 
 while(check == True):
 
